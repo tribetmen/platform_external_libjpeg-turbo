@@ -203,9 +203,6 @@ get_soi (j_decompress_ptr cinfo)
 
   TRACEMS(cinfo, 1, JTRC_SOI);
 
-  if (cinfo->marker->saw_SOI)
-    ERREXIT(cinfo, JERR_SOI_DUPLICATE);
-
   /* Reset all parameters that are defined to be reset by SOI */
 
   for (i = 0; i < NUM_ARITH_TBLS; i++) {
